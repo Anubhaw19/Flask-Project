@@ -1,0 +1,24 @@
+<h2>
+    Hello, you have got the result: {{results}}
+</h2>
+<hr>
+<p> using FOR loop in jinja</p>
+<h3>
+    {% for key,value in results.items() %}
+    {# this is comment section, fetch result amd score form the result dictonary #}
+    <h3> {{key}}: {{value}}</h3>
+    {% endfor %}
+</h3>
+
+<hr>
+<p>using dictionary[KEY] as python</p>
+<h1>score : {{results['score']}}</h1>
+
+<hr>
+<p>using IF conditon in jinja</p>
+ <h2> based on your marks you have scored {{results['score']}} marks</h2>
+ {% if results['score']>=50 %}
+<h3>pass</h3>
+ {% else %}
+ <h3>better luck next time</h3>
+ {%endif%}
